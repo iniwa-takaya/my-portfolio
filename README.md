@@ -6,7 +6,8 @@
 | ----------------- | ------ | ----------- |
 | title             | string | null: false |
 | date              | string | null: false |
-| url               | string | null: false |
-| purpose           | string | null: false |
-| persona           | string | null: false |
-| detail            | string | null: false |
+| app_url           | string | null: false |
+| git_url           | string | null: false |
+| purpose           | text   | null: false |
+| persona           | text   | null: false |
+| detail            | text   | null: false |
