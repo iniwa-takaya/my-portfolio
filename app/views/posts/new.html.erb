@@ -21,9 +21,9 @@
         <div class="article-inner">
           <h2 class="article-title">Portfolio作成フォーム</h2>
           <div class="article-body">
-            <h3 class="article-info-title">アプリケーションのタイトル</h3>
-            <p><%= f.file_field :image ,class: "image-form" %></p>
             <h3 class="article-info-title">アプリケーションの画像</h3>
+            <p><%= f.file_field :image ,class: "image-form" %></p>
+            <h3 class="article-info-title">アプリケーションのタイトル</h3>
             <p><%= f.text_field :title ,class: "text-form" %></p>
             <h3 class="article-info-title">アプリケーションのURL</h3>
             <p><%= f.text_field :app_url ,class: "text-form" %></p>
@@ -33,11 +33,11 @@
             <p>開始日：<%= f.date_field :start_date ,class: "date_form" %>
                終了日：<%= f.date_field :last_date ,class: "date_form" %></p>
             <h3 class="article-info-title">ペルソナと課題</h3>
-            <p><%= f.text_area :persona ,class: "area-form-s" %></p>
+            <p><%= f.text_area :persona ,class: "area-form-s", size: "30x10" %></p>
             <h3 class="article-info-title">アプリケーションの目的</h3>
-            <p><%= f.text_area :purpose ,class: "area-form-l" %></p>
+            <p><%= f.text_area :purpose ,class: "area-form-s", size: "30x10" %></p>
             <h3 class="article-info-title">アプリケーションの詳細</h3>
-            <p><%= f.text_area :detail ,class: "area-form-l" %></p>
+            <p><%= f.text_area :detail ,class: "area-form-l", size: "30x10" %></p>
             <h2 class="article-title"><%= f.submit "保存する" ,class: 'btn' %></h2>
           </div>
           <div class="home-link">
@@ -49,6 +49,6 @@
         <span class="material-icons-outlined">expand_less</span>
       </div>
       </div>
-    <% end %>``
+    <% end %>
   </main>
 </div>

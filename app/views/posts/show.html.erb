@@ -23,17 +23,17 @@
         </p>
         <div class="article-body">
           <h3 class="article-info-title">アプリケーションのURL</h3>
-          <p><a href=<%= @post.app_url %> target="_blank" rel="noopener"><%= @post.app_url %></a></p>
+          <p class="text-box"><a href=<%= @post.app_url %> target="_blank" rel="noopener"><%= @post.app_url %></a></p>
           <h3 class="article-info-title">GithubのURL</h3>
-          <p><a href=<%= @post.git_url %> target="_blank" rel="noopener"><%= @post.git_url %></a></p>
+          <p class="text-box"><a href=<%= @post.git_url %> target="_blank" rel="noopener"><%= @post.git_url %></a></p>
           <h3 class="article-info-title">制作期間</h3>
-          <p><%= @post.start_date %> ~ <%= @post.last_date %></p>
+          <p class="date-box"><%= @post.start_date %> <span class="kara">から</span> <%= @post.last_date %></p>
           <h3 class="article-info-title">ペルソナ</h3>
-          <p><%= @post.persona %></p>
+          <div class="text-box m"><%= simple_format @post.persona %></div>
           <h3 class="article-info-title">アプリケーションの目的</h3>
-          <p><%= @post.purpose %></p>
+          <div class="text-box m"><%= simple_format @post.purpose %></div>
           <h3 class="article-info-title">アプリケーションの詳細</h3>
-          <p><%= @post.detail %></p>
+          <div class="text-box m"><%= simple_format @post.detail %></div>
         </div>
         <div class="home-link">
           <%= link_to 'Contents一覧へ', root_path %>

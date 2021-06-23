@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   def index
     @post = Post.all
   end
@@ -12,7 +11,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       redirect_to root_path
-    else  
+    else
       render :new
     end
   end
@@ -26,5 +25,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :start_date, :last_date, :app_url, :git_url, :purpose, :persona, :detail)
   end
-
 end
