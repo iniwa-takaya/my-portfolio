@@ -46,3 +46,17 @@
   border: 1px solid black;
   box-shadow: none;
 }
+
+/* エラー表示 */
+.error-alert {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+.error-message {
+  color: red;
+  padding: 8px 10px;
+}

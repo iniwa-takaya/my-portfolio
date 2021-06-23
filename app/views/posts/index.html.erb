@@ -72,7 +72,7 @@
         <div class="works-list">
           <% @post.each do |post| %>
             <%= link_to post_path(post), class: "works-item" do %>
-              <p class="works-img"><%= image_tag 'works-dummy-thumb.jpg' %></p>
+              <p class="works-img"><%= image_tag post.image %></p>
               <p class="works-name"><%= post.title %></p>
               <p class="works-info">Github / <%= post.git_url %></p>
             <% end %>

@@ -19,9 +19,11 @@
       <div class="article-inner">
         <h2 class="article-title"><%= @post.title %></h2>
         <p class="article-img">
-          <%= image_tag 'notebook.jpg', class: "notebook-image" %>
+          <%= image_tag @post.image, class: "post-image" %>
         </p>
         <div class="article-body">
+          <h3 class="article-info-title">アプリケーションのタイトル</h3>
+          <p class="text-box"><%= @post.title %></p>
           <h3 class="article-info-title">アプリケーションのURL</h3>
           <p class="text-box"><a href=<%= @post.app_url %> target="_blank" rel="noopener"><%= @post.app_url %></a></p>
           <h3 class="article-info-title">GithubのURL</h3>

@@ -15,11 +15,12 @@
   </header>
   <%# /ヘッダー部分 %>
   <main class="content">
-    <%= form_with model: @post, local: true do |f|%>  
+    <%= form_with model: @post, local: true do |f|%>
       <div class="new-form">
         <article class="article">
         <div class="article-inner">
           <h2 class="article-title">Portfolio作成フォーム</h2>
+          <%= render 'shared/error_form', model: f.object %>
           <div class="article-body">
             <h3 class="article-info-title">アプリケーションの画像</h3>
             <p><%= f.file_field :image ,class: "image-form" %></p>
