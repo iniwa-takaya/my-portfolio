@@ -17,25 +17,23 @@
   <main class="content">
     <article class="article">
       <div class="article-inner">
-        <h2 class="article-title">DesignXYZ様</h2>
+        <h2 class="article-title"><%= @post.title %></h2>
         <p class="article-img">
           <%= image_tag 'notebook.jpg', class: "notebook-image" %>
         </p>
         <div class="article-body">
           <h3 class="article-info-title">アプリケーションのURL</h3>
-          <p><a href="https://yahoo.co.jp" target="_blank" rel="noopener">https://yahoo.co.jp</a></p>
+          <p><a href=<%= @post.app_url %> target="_blank" rel="noopener"><%= @post.app_url %></a></p>
           <h3 class="article-info-title">GithubのURL</h3>
-          <p><a href="https://yahoo.co.jp" target="_blank" rel="noopener">https://yahoo.co.jp</a></p>
+          <p><a href=<%= @post.git_url %> target="_blank" rel="noopener"><%= @post.git_url %></a></p>
           <h3 class="article-info-title">制作期間</h3>
-          <p>__ ~ __</p>
+          <p><%= @post.start_date %> ~ <%= @post.last_date %></p>
           <h3 class="article-info-title">ペルソナ</h3>
-          <p>サービスの認知と新規クライアントの獲得</p>
+          <p><%= @post.persona %></p>
           <h3 class="article-info-title">アプリケーションの目的</h3>
-          <p>テキストが入りますテキストが入ります</p>
+          <p><%= @post.purpose %></p>
           <h3 class="article-info-title">アプリケーションの詳細</h3>
-          <p>
-            テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。<br>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
-          </p>
+          <p><%= @post.detail %></p>
         </div>
         <div class="home-link">
           <%= link_to 'Contents一覧へ', root_path %>

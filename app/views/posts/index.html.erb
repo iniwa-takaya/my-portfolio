@@ -28,7 +28,7 @@
         </p>
       </div>
     </div>
-    
+
     <%# about %>
     <section class="about section" id="about">
       <div class="inner">
@@ -54,7 +54,7 @@
             </p>
             <p>
               最近の趣味は、コーヒーを淹れることです。毎日、好きなコーヒー豆を挽いてペーパドリップで淹れています。
-              最近は、エスプレッソに手を出したのですが、ゆくゆくは焙煎やバリスタなどの勉強もしてみたいです。
+              最近は、エスプレッソに手を出したのですが、焙煎やバリスタにも興味があります。
             </p>
           </div>
         </div>
@@ -66,10 +66,12 @@
       <div class="inner">
         <h2 class="title">CONTENTS</h2>
         <div class="works-list">
-          <%= link_to post_path(1), class: "works-item" do %>
-            <p class="works-img"><%= image_tag 'works-dummy-thumb.jpg' %></p>
-            <p class="works-name">作品名が入る</p>
-            <p class="works-info">Design / Coding(Responsive)</p>
+          <% @post.each do |post| %>
+            <%= link_to post_path(post), class: "works-item" do %>
+              <p class="works-img"><%= image_tag 'works-dummy-thumb.jpg' %></p>
+              <p class="works-name"><%= post.title %></p>
+              <p class="works-info">Github / <%= post.git_url %></p>
+            <% end %>
           <% end %>
         </div>
       </div>
