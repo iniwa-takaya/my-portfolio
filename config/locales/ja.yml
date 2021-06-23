@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    attributes:
+      post:
+        title: タイトル
+        image: アプリケーションの画像
+        start_date: 開始日
+        last_date: 終了日
+        app_url: アプリのURL
+        purpose: アプリの目的
+        persona: ペルソナと課題
+        detail: 詳細
+  time:
+    formats:
+      default: "%Y/%m/%d"

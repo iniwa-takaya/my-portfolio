@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :find_params, only: %i[show edit update]
+
   def index
     @post = Post.all
   end
@@ -17,10 +19,24 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to post_path(@post)
+    else
+      render :edit
+    end
   end
 
   private
+
+  def find_params
+    @post = Post.find(params[:id])
+  end
 
   def post_params
     params.require(:post).permit(:title, :start_date, :last_date, :app_url, :git_url, :purpose, :persona, :detail, :image)

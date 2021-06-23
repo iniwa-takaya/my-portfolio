@@ -29,7 +29,7 @@
           <h3 class="article-info-title">GithubのURL</h3>
           <p class="text-box"><a href=<%= @post.git_url %> target="_blank" rel="noopener"><%= @post.git_url %></a></p>
           <h3 class="article-info-title">制作期間</h3>
-          <p class="date-box"><%= @post.start_date %> <span class="kara">から</span> <%= @post.last_date %></p>
+          <p class="date-box"><%= l @post.start_date %> <span class="kara">から</span> <%= l @post.last_date %></p>
           <h3 class="article-info-title">ペルソナ</h3>
           <div class="text-box m"><%= simple_format @post.persona %></div>
           <h3 class="article-info-title">アプリケーションの目的</h3>
@@ -39,6 +39,9 @@
         </div>
         <div class="home-link">
           <%= link_to 'Contents一覧へ', root_path %>
+        </div>
+        <div class="new-post">
+          <%= link_to 'ポートフォリオを編集する', edit_post_path(@post) %>
         </div>
       </div>
     </article>
