@@ -24,7 +24,7 @@ https://my-portfolio-128.herokuapp.com/
 
 ## 目指した課題解決
 
-- ### 前職で、2つの業務を兼任した際の課題を解決するために作成
+- ### ポートフォリオを表示する事
   #### ペルソナ
   - 本人
   #### ペルソナの課題
@@ -63,6 +63,7 @@ https://my-portfolio-128.herokuapp.com/
   - html5
   - css3
 - コマンド内容
+
 ```
   % git clone https://github.com/we-b/my-portfolio-128.git
   % cd my-portfolio
