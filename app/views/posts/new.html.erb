@@ -1,55 +1,38 @@
-<div class="wrapper">
-  <%# ヘッダー部分 %>
-  <header class="header ">
-    <div class="header-inner">
-      <h1 class="header-logo">
-        <%= link_to "My portfolio", root_path %>
-      </h1>
-      <nav class="header-nav">
-        <ul class="header-nav-list">
-          <li class="header-nav-item"><a class="link" href="#works">CONTENTS</a></li>
-          <li class="header-nav-item"><a class="link" href="#about">ABOUT</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <%# /ヘッダー部分 %>
-  <main class="content">
-    <%= form_with model: @post, local: true do |f|%>
-      <div class="new-form">
-        <article class="article">
-        <div class="article-inner">
-          <h2 class="article-title">Portfolio作成フォーム</h2>
-          <%= render 'shared/error_form', model: f.object %>
-          <div class="article-body">
-            <h3 class="article-info-title">アプリケーションの画像(必須)</h3>
-            <p><%= f.file_field :image ,class: "image-form" %></p>
-            <h3 class="article-info-title">アプリケーションのタイトル(必須)</h3>
-            <p><%= f.text_field :title ,class: "text-form" %></p>
-            <h3 class="article-info-title">アプリケーションのURL(必須)</h3>
-            <p><%= f.text_field :app_url ,class: "text-form" %></p>
-            <h3 class="article-info-title">GithubのURL</h3>
-            <p><%= f.text_field :git_url ,class: "text-form" %></p>
-            <h3 class="article-info-title">制作期間(必須)</h3>
-            <p>開始日：<%= f.date_field :start_date ,class: "date_form" %>
-               終了日：<%= f.date_field :last_date ,class: "date_form" %></p>
-            <h3 class="article-info-title">ペルソナと課題(必須)</h3>
-            <p><%= f.text_area :persona ,class: "area-form-s", size: "30x10" %></p>
-            <h3 class="article-info-title">アプリケーションの目的(必須)</h3>
-            <p><%= f.text_area :purpose ,class: "area-form-s", size: "30x10" %></p>
-            <h3 class="article-info-title">アプリケーションの詳細(必須)</h3>
-            <p><%= f.text_area :detail ,class: "area-form-l", size: "30x10" %></p>
-            <h2 class="article-title"><%= f.submit "保存する" ,class: 'btn' %></h2>
-          </div>
-          <div class="home-link">
-            <%= link_to 'Contents一覧へ', root_path %>
-          </div>
+<main class="content">
+  <%= form_with model: @post, local: true do |f|%>
+    <div class="new-form">
+      <article class="article">
+      <div class="article-inner">
+        <h2 class="article-title">Portfolio作成フォーム</h2>
+        <%= render 'shared/error_form', model: f.object %>
+        <div class="article-body">
+          <h3 class="article-info-title">アプリケーションの画像(必須)</h3>
+          <p><%= f.file_field :image ,class: "image-form" %></p>
+          <h3 class="article-info-title">アプリケーションのタイトル(必須)</h3>
+          <p><%= f.text_field :title ,class: "text-form" %></p>
+          <h3 class="article-info-title">アプリケーションのURL(必須)</h3>
+          <p><%= f.text_field :app_url ,class: "text-form" %></p>
+          <h3 class="article-info-title">GithubのURL</h3>
+          <p><%= f.text_field :git_url ,class: "text-form" %></p>
+          <h3 class="article-info-title">制作期間(必須)</h3>
+          <p>開始日：<%= f.date_field :start_date ,class: "date_form" %>
+             終了日：<%= f.date_field :last_date ,class: "date_form" %></p>
+          <h3 class="article-info-title">ペルソナと課題(必須)</h3>
+          <p><%= f.text_area :persona ,class: "area-form-s", size: "30x10" %></p>
+          <h3 class="article-info-title">アプリケーションの目的(必須)</h3>
+          <p><%= f.text_area :purpose ,class: "area-form-s", size: "30x10" %></p>
+          <h3 class="article-info-title">アプリケーションの詳細(必須)</h3>
+          <p><%= f.text_area :detail ,class: "area-form-l", size: "30x10" %></p>
+          <h2 class="article-title"><%= f.submit "保存する" ,class: 'btn' %></h2>
         </div>
-      </article>
-      <div class="page-top" id="js-page-top">
-        <span class="material-icons-outlined">expand_less</span>
+        <div class="home-link">
+          <%= link_to 'Contents一覧へ', root_path %>
+        </div>
       </div>
-      </div>
-    <% end %>
-  </main>
-</div>
+    </article>
+    <div class="page-top" id="js-page-top">
+      <span class="material-icons-outlined">expand_less</span>
+    </div>
+    </div>
+  <% end %>
+</main>

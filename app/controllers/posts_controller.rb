@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_params, only: %i[show edit update]
+  before_action :find_params, only: %i[show edit update destroy]
 
   def index
     @post = Post.all
@@ -30,6 +30,11 @@ class PostsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to root_path
   end
 
   private

@@ -23,3 +23,6 @@
   margin: 0 10px;
   font-size: 1.0rem;
 }
+.delete_path {
+  color: red;
+}
