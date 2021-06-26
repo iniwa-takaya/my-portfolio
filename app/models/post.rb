@@ -9,5 +9,6 @@ class Post < ApplicationRecord
     validates :purpose
     validates :persona
     validates :detail
+    validates :image
   end
 end
