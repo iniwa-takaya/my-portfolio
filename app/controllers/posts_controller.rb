@@ -33,8 +33,13 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post.destroy
-    redirect_to root_path
+    pass = gets.to_i
+    if pass == 1234
+      @post.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   private
